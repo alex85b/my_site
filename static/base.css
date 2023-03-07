@@ -7,6 +7,18 @@
   text-decoration: none;
 }
 
+/* Index Body - Start */
+
+.index-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Index Body - End */
+
+/* Navbar - Start */
+
 .index-header {
   display: flex; /* This becomes a container, a flexbox container */
   width: 90%;
@@ -14,7 +26,8 @@
   border-radius: 0 0 10px 10px;
   margin: 0 auto;
   justify-content: space-between; /* Remaining space goes "between" children of the container */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25); /**/
+  border-bottom: 3px solid mediumslateblue;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);  */
 }
 
 .index-header {
@@ -65,7 +78,8 @@
 }
 
 .hamburger:hover {
-  background:cornflowerblue;
+  background-color: rgb(241, 235, 207);
+  border-radius: 3rem;
 }
 
 .hamburger div {
@@ -76,7 +90,34 @@
   background: #0e2431;
 }
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the last one */
+/* Navbar - End */
+
+/* Footer - Start */
+
+.index-footer {
+  width: 90%;
+  align-items: center;
+  margin: auto auto 0 ;
+  border-top: 3px solid mediumslateblue;
+  border-radius: 10px 10px 0 0 ;
+}
+
+.index-footer ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.index-footer li {
+  padding: 1rem;
+}
+
+/* Footer - End */
+
+/* Media Query: Screen size dependancy - Start */
+
 @media screen and (max-width: 720px) {
   .hamburger {
     display: flex;
@@ -109,6 +150,11 @@
     border-radius: 0;
   }
 
+  .index-footer {
+    width: 100%;
+    border-radius: 0;
+  }
+
   .index-header ul {
     flex-direction: column;
   }
@@ -120,3 +166,11 @@
     margin: 1.5rem 0;
   }
 }
+
+@media screen and (max-width: 425px) {
+  .index-footer ul {
+    flex-direction: column;
+  }
+}
+
+/* Media Query: Screen size dependancy - End */

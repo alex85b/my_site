@@ -3,6 +3,7 @@ from django.views import View
 
 # Create your views here.
 
+highlight = []
 
 class IndexView(View):
     def get(self, request):
