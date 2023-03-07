@@ -6,12 +6,32 @@
   <meta http-equiv="X-UA-Compatible">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
-    {% block title %}{% endblock %}
+    {% block title %}
+    {% endblock %}
   </title>
-  {% block css %}{% endblock %}
+  {% block css %}
+  {% endblock %}
   <link rel="stylesheet" href="{% static "base.css" %}">
 </head>
 <body>
+  <header class="index-header">
+    <h1 class="main-header">Main Logo</h1>
+    <input type="checkbox" id="nav_check" hidden>
+    <nav>
+      <h1 class="side-header">Main Logo</h1>
+      <ul>
+        <li><a href="#">Dummy-Link (1)</a></li>
+        <li><a href="#">Dummy-Link (2)</a></li>
+        <li><a href="#">Dummy-Link (3)</a></li>
+      </ul>
+    </nav>
+    <label for="nav_check"class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </label>
+</header>
+
   {% block body %}
   {% endblock %}
 </body>

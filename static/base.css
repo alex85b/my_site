@@ -1,9 +1,122 @@
-* { /* Global Rest */
+* {
+  /* Global Rest */
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Box size includes pading and margin an borders */
+  list-style: none;
+  text-decoration: none;
 }
 
-body {
-  background-color: aqua; /* Test */
+.index-header {
+  display: flex; /* This becomes a container, a flexbox container */
+  width: 90%;
+  align-items: center;
+  border-radius: 0 0 10px 10px;
+  margin: 0 auto;
+  justify-content: space-between; /* Remaining space goes "between" children of the container */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25); /**/
+}
+
+.index-header {
+  padding: 0.5rem;
+}
+
+.side-header {
+  display: none;
+}
+
+.index-header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.index-header li a {
+  padding: 0.5rem;
+  margin: 0 1rem;
+  transition: 0.3s;
+}
+
+.index-header a:visited {
+  color: black;
+}
+
+.index-header a:hover,
+.index-header a:active {
+  background-color: chartreuse;
+  border-radius: 0.3rem;
+}
+
+.index-header a:focus {
+  background-color: aqua;
+  border-radius: 0.5rem;
+}
+
+.hamburger {
+  display: none;
+  height: 1.5rem;
+  width: 2rem;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 0.5rem 0 0;
+}
+
+.hamburger:hover {
+  background:cornflowerblue;
+}
+
+.hamburger div {
+  display: block;
+  height: 0.25rem;
+  width: 100%;
+  border-radius: 12px;
+  background: #0e2431;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the last one */
+@media screen and (max-width: 720px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .side-header {
+    display: block;
+    margin: 0.5rem;
+    text-align: center;
+  }
+
+  .index-header nav {
+    position: absolute;
+    left: -300px;
+    top: 0;
+    width: fit-content;
+    height: fit-content;
+    background-color: #fefefe;
+    transition: 0.2s;
+    box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 0 0 2rem 0;
+  }
+
+  #nav_check:checked ~ nav {
+    left: 0;
+  }
+
+  .index-header {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .index-header ul {
+    flex-direction: column;
+  }
+
+  .index-header li {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 1.5rem 0;
+  }
 }
