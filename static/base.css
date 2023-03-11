@@ -82,29 +82,24 @@ body {
 
 .index-header li {
   width: 11rem;
+  transition: 0.1s;
+}
+
+.index-header li:hover {
+  transform: scale(1.2);
+}
+
+.index-header li:active {
+  transform: scale(0.9);
 }
 
 .index-header li a {
   padding: 0.5rem;
   margin: 0 1rem;
-  transition: 0.2s;
 }
 
 .index-header a:visited {
-  color: black;
-}
-
-.index-header a:hover,
-.index-header a:active {
-  background-color: #393E46;
-  color: #EEEEEE;
-  border-radius: 1rem;
-}
-
-.index-header a:focus {
-  background-color: #222831;
-  color: #EEEEEE;
-  border-radius: 1rem;
+  /* color: black; */
 }
 
 .hamburger {

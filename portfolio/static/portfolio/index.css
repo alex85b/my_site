@@ -49,17 +49,17 @@
 }
 
 #featured_projects_container {
-  width: fit-content;
-  box-shadow: 0 0 35px 15px   #00ADB5;
+  width: 100%;
+  box-shadow: 0 0 20px 10px #00ADB5;
   background-color: #EEEEEE;
-  border-radius: 1rem;
+  border-radius: 2rem;
   text-align: center;
 }
 
 #featured_projects_container h2 {
-  padding: 3rem 0 0;
+  padding: 3rem 0 3rem;
   color: #393E46;
-  
+  font-size: 2.5rem;
 }
 
 #featured_projects_container ul{
@@ -70,8 +70,25 @@
 
 #featured_projects_container li{
   padding: 1rem;
-  margin: 3rem;
+  margin: 1rem;
 }
+
+#project {
+  flex: 0 0 20rem;
+  box-shadow: 1px 1px 1px 1px #393E46;
+  border-radius: 2rem;
+  transition: transform .1s; /* Animation */
+}
+
+#project:hover {
+  background-color: #00ADB5;
+}
+
+#project:active {
+  background-color: #00ADB5;
+  transform: scale(0.8); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
 
 /* Media Queries - Start */
 
