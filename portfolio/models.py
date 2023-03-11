@@ -31,6 +31,8 @@ class Project(models.Model):
     youtube_link = models.URLField(max_length=200, blank=True, null=True)
     description = models.TextField(validators=[MinLengthValidator(20)])
     skills = models.ManyToManyField(Skill)
+    excerpt = models.CharField(max_length=300, null=True)
+    details = models.TextField(validators=[MinLengthValidator(20)], null=True)
     slug = models.SlugField(unique=True, db_index=True)
 
     def __str__(self) -> str:

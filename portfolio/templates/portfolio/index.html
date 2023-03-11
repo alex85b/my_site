@@ -10,5 +10,33 @@
 {% endblock %}
 
 {% block body %}
+  <section id="welcome">
+    <div id="welcome_container">
+      <header>
+        <img
+          src="{% static 'portfolio/images/me.png' %}"
+          alt="Alex Balashov - The Owner of this Portfolio Site"
+        />
+        <h2>ALEX'S PORTFOLIO</h2>
+      </header>
+      <p>
+        Hello, I'm Alex, a junior developer. I'm currently interested in Full-stack and Backend development.<br/>
+        I graduated from HIT with a BCs bachelor's degree in Computer Science<br/>
+        I have experience with Java, JavaScript and Nodejs, Python with Django, CSS and HTML5<br/>
+        Currently - I'm searching for new job opportunities as a Full-Stack Developer<br/>
+        Feel free to browse my projects, leave a comment, or contact me directly
+      </p>
+    </div>
+  </section>
 
+  <section id="featured_projects">
+    <div id="featured_projects_container">
+      <H2>Latest Projects</H2>
+      <ul>
+        {% for p in projects %}
+          {% include "portfolio/includes/project.html" %}
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
 {% endblock %}

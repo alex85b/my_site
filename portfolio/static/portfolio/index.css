@@ -1,0 +1,123 @@
+#welcome {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+#welcome_container {
+  width: 58rem;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+#welcome_container p {
+  font-size: 1.25rem;
+  color: #00ADB5;
+}
+
+#welcome header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+  gap: 2rem;
+}
+
+#welcome header h2 {
+  align-self: center;
+  font-size: 4rem;
+  color: #00ADB5;
+}
+
+#welcome img {
+  width: 10rem;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border: 5px solid #393E46;
+  border-radius: 12px;
+  background-color: #EEEEEE;
+  transform: rotateZ(3deg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+#featured_projects {
+  width: 100;
+  padding: 1rem 1rem 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+#featured_projects_container {
+  width: fit-content;
+  box-shadow: 0 0 35px 15px   #00ADB5;
+  background-color: #EEEEEE;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+#featured_projects_container h2 {
+  padding: 3rem 0 0;
+  color: #393E46;
+  
+}
+
+#featured_projects_container ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#featured_projects_container li{
+  padding: 1rem;
+  margin: 3rem;
+}
+
+/* Media Queries - Start */
+
+@media screen and (max-width: 200px) {
+  #welcome {
+    width: 100%;
+    margin: 0;
+    border-radius: 0rem;
+  }
+
+  #welcome img {
+    width: 5rem;
+  }
+
+  #welcome header {
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #welcome header h2 {
+    font-size: smaller;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 520px) and (min-width: 201px) {
+  #welcome {
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    border-radius: 0rem;
+  }
+
+  #welcome header h2 {
+    text-align: center;
+  }
+
+  #welcome header {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
+}
+
+/* Media Queries - End */

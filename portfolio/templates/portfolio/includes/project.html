@@ -1,0 +1,19 @@
+{% load static %}
+
+<li>
+  <article id="project">
+    <a href="">
+      <div id="project_info">
+        <h3>{{ p.0.name }}</h3>
+        <p>{{ p.0.date }}</p>
+      </div>
+      {% comment %} <p>Project Lead: {{ p.0.team_lead }}</p> {% endcomment %}
+      <div id="skils">
+        <h4>Demonstrated Skills</h4>
+        {% for skill in p.1 %}
+          <p>{{ skill }}</p>
+        {% endfor %}
+      </div>
+    </a>
+  </article>
+</li>

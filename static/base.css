@@ -1,10 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat&family=PT+Sans&family=Ubuntu&display=swap");
+/*
+font-family: 'Courgette', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'PT Sans', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+*/
+
 * {
   /* Global Rest */
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Box size includes pading and margin an borders */
+  
+  /* Box size includes pading and margin an borders */
+  box-sizing: border-box;
+
   list-style: none;
   text-decoration: none;
+}
+
+h1 {
+  font-family: "Courgette", cursive;
+}
+
+h2,
+h3 {
+  font-family: "Ubuntu", sans-serif;
+}
+
+p {
+  font-family: "PT Sans", sans-serif;
+  line-height: 170%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  background-color: #222831;
 }
 
 /* Index Body - Start */
@@ -12,6 +46,7 @@
 .index-body {
   display: flex;
   flex-direction: column;
+  align-items: center;
   min-height: 100vh;
 }
 
@@ -20,18 +55,17 @@
 /* Navbar - Start */
 
 .index-header {
-  display: flex; /* This becomes a container, a flexbox container */
   width: 90%;
-  align-items: center;
-  border-radius: 0 0 10px 10px;
-  margin: 0 auto;
-  justify-content: space-between; /* Remaining space goes "between" children of the container */
-  border-bottom: 3px solid mediumslateblue;
-  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);  */
+  height: 3.5rem;
+  border-radius: 0 0 30px 30px;
+  background-color: #EEEEEE;
+  flex: 0 1 auto;
+  box-shadow: 0 0 10px 5px #EEEEEE;
 }
 
-.index-header {
-  padding: 0.5rem;
+.index-header nav {
+  width: 100%;
+  height: 100%;
 }
 
 .side-header {
@@ -40,16 +74,20 @@
 
 .index-header ul {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-evenly;
   width: 100%;
   height: 100%;
+}
+
+.index-header li {
+  width: 11rem;
 }
 
 .index-header li a {
   padding: 0.5rem;
   margin: 0 1rem;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .index-header a:visited {
@@ -58,27 +96,28 @@
 
 .index-header a:hover,
 .index-header a:active {
-  background-color: chartreuse;
-  border-radius: 0.3rem;
+  background-color: #393E46;
+  color: #EEEEEE;
+  border-radius: 1rem;
 }
 
 .index-header a:focus {
-  background-color: aqua;
-  border-radius: 0.5rem;
+  background-color: #222831;
+  color: #EEEEEE;
+  border-radius: 1rem;
 }
 
 .hamburger {
   display: none;
   height: 1.5rem;
   width: 2rem;
-  /* display: flex; */
   flex-direction: column;
   justify-content: space-between;
   margin: 0 0.5rem 0 0;
 }
 
 .hamburger:hover {
-  background-color: rgb(241, 235, 207);
+  background-color: rgb(241, 200, 95);
   border-radius: 3rem;
 }
 
@@ -92,26 +131,41 @@
 
 /* Navbar - End */
 
+/* Filler - Start */
+
+.filler {
+  width: 100%;
+  /*
+  flex-grow
+  flex-shrink
+  flex-basis
+  */
+  flex: 1 1 auto;
+}
+
+/* Filler - End */
+
 /* Footer - Start */
 
 .index-footer {
   width: 90%;
-  align-items: center;
-  margin: auto auto 0 ;
-  border-top: 3px solid mediumslateblue;
-  border-radius: 10px 10px 0 0 ;
+  height: 3.5rem;
+  border-radius: 30px 30px 0 0;
+  background-color: #EEEEEE;
+  box-shadow: 0 0 10px 5px #EEEEEE;
+  /* box-shadow: 0 0 20px 6px #EEEEEE; */
 }
 
+.index-footer nav {
+  width: 100%;
+  height: 100%;
+}
 .index-footer ul {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
   height: 100%;
-}
-
-.index-footer li {
-  padding: 1rem;
 }
 
 /* Footer - End */
@@ -121,6 +175,10 @@
 @media screen and (max-width: 720px) {
   .hamburger {
     display: flex;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 999;
   }
 
   .side-header {
@@ -139,6 +197,7 @@
     transition: 0.2s;
     box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.25);
     border-radius: 0 0 2rem 0;
+    z-index: 998;
   }
 
   #nav_check:checked ~ nav {
