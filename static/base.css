@@ -23,13 +23,14 @@ h1 {
 }
 
 h2,
-h3 {
+h3,
+h4 {
   font-family: "Ubuntu", sans-serif;
 }
 
 p {
   font-family: "PT Sans", sans-serif;
-  line-height: 170%;
+  line-height: 185%;
 }
 
 a {
@@ -38,7 +39,7 @@ a {
 }
 
 body {
-  background-color: #222831;
+  background-color:#EEEEEE
 }
 
 /* Index Body - Start */
@@ -54,13 +55,18 @@ body {
 
 /* Navbar - Start */
 
-.index-header {
-  width: 90%;
-  height: 3.5rem;
-  border-radius: 0 0 30px 30px;
+#header-header_container {
   background-color: #EEEEEE;
-  flex: 0 1 auto;
-  box-shadow: 0 0 10px 5px #EEEEEE;
+  width: 100%;
+}
+
+.index-header {
+  width: 60%;
+  height: 3.5rem;
+  border-radius: 0 0 80px 80px;
+  background-color: #393E46;
+  margin: 0 auto;
+  /* box-shadow: 0 0 10px 5px #EEEEEE; */
 }
 
 .index-header nav {
@@ -98,10 +104,6 @@ body {
   margin: 0 1rem;
 }
 
-.index-header a:visited {
-  /* color: black; */
-}
-
 .hamburger {
   display: none;
   height: 1.5rem;
@@ -126,6 +128,13 @@ body {
 
 /* Navbar - End */
 
+.body-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 /* Filler - Start */
 
 .filler {
@@ -143,11 +152,11 @@ body {
 /* Footer - Start */
 
 .index-footer {
-  width: 90%;
+  width: 60%;
   height: 3.5rem;
-  border-radius: 30px 30px 0 0;
-  background-color: #EEEEEE;
-  box-shadow: 0 0 10px 5px #EEEEEE;
+  border-radius: 80px 80px 0 0;
+  background-color: #393E46;
+  /* box-shadow: 0 0 10px 5px #EEEEEE; */
   /* box-shadow: 0 0 20px 6px #EEEEEE; */
 }
 
@@ -172,7 +181,7 @@ body {
     display: flex;
     position: absolute;
     right: 5px;
-    top: 5px;
+    top: 12px;
     z-index: 999;
   }
 

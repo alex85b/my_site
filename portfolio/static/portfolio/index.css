@@ -1,36 +1,32 @@
-#welcome {
-  width: 100%;
+/*###########################################################################################*/
+/*################################## Welcome Section ########################################*/
+/*###########################################################################################*/
 
+#welcome_section {
+  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem 0 4rem;
+  background-color: #EEEEEE;
 }
 
-#welcome_container {
-  width: 58rem;
-  padding: 2rem;
-  border-radius: 1rem;
+#welcome_section header h2 {
+  font-size: 6rem;
+  color: #222831;
+  padding: 0 0 2rem;
 }
 
-#welcome_container p {
-  font-size: 1.25rem;
-  color: #00ADB5;
-}
-
-#welcome header {
-  width: 100%;
+#welcome_section_container {
   display: flex;
+  justify-content: center;
   flex-direction: row;
-  margin-bottom: 1rem;
+  width: fit-content;
   gap: 2rem;
 }
 
-#welcome header h2 {
-  align-self: center;
-  font-size: 4rem;
-  color: #00ADB5;
-}
-
-#welcome img {
+#welcome_section_container img {
   width: 10rem;
   object-fit: cover;
   object-position: 50% 50%;
@@ -41,93 +37,192 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
-#featured_projects {
-  width: 100;
-  padding: 1rem 1rem 5rem;
-  display: flex;
-  justify-content: center;
+#welcome_section_container p {
+  font-size: 1.4rem;
+  color: #393E46;
 }
 
-#featured_projects_container {
+/*###########################################################################################*/
+/*################################## experienced section ####################################*/
+/*###########################################################################################*/
+
+#experienced_section {
+  margin: 4rem 0;
   width: 100%;
-  box-shadow: 0 0 20px 10px #00ADB5;
-  background-color: #EEEEEE;
-  border-radius: 2rem;
+}
+
+#experienced_section h2 {
+  text-align: center;
+  font-size: 3rem;
+  padding: 0 0 2rem;
+  color: #00ADB5;
+}
+
+#experienced_section__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#experienced_section__container div {
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
-#featured_projects_container h2 {
-  padding: 3rem 0 3rem;
-  color: #393E46;
-  font-size: 2.5rem;
+#experienced_section__container i {
+  width: 120px;
+  height: 120px;
+  color: #00ADB5;
+  object-fit: cover;
 }
 
-#featured_projects_container ul{
+#experienced_section__container img {
+  width: 120px;
+  height: 120px;
+  color: #00ADB5;
+  object-fit: cover;
+}
+
+#experienced_section__container p {
+  font-size: 1.25rem;
+  color: #00ADB5;
+}
+
+/*###########################################################################################*/
+/*################################### projects section ######################################*/
+/*###########################################################################################*/
+
+#projects_section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0 6rem;
+}
+
+#projects_section h2 {
+  text-align: center;
+  font-size: 3rem;
+  padding: 0 0 2rem;
+  color: #00ADB5;
+}
+
+#projects_section ul {
+  width: fit-content;
+  padding: 2rem 8rem 2rem;
+  box-shadow: 0 0 20px 10px #00ADB5;
+  background-color: #EEEEEE;
+  border-radius: 1px 200px 1px 200px;
+  text-align: center;
+}
+
+#projects_section ul{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 
-#featured_projects_container li{
+#projects_section li{
   padding: 1rem;
   margin: 1rem;
 }
 
 #project {
   flex: 0 0 20rem;
-  box-shadow: 1px 1px 1px 1px #393E46;
-  border-radius: 2rem;
+  /* box-shadow: 1px 1px 1px 1px #393E46; */
+  /* border-radius: 2rem; */
   transition: transform .1s; /* Animation */
 }
 
 #project:hover {
-  background-color: #00ADB5;
+  transform: scale(1.1);
 }
 
 #project:active {
-  background-color: #00ADB5;
-  transform: scale(0.8); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(0.8);
 }
 
+#project_info {
+  padding: 0 0 1rem;
+}
+
+#project_info p {
+  font-size: 16px;
+  font-family: 'Courgette', cursive;
+  padding: 4px 0 0 0;
+}
+
+#skils {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#skils h4 {
+  padding: 0 0 1rem;
+}
+
+#skils p {
+  width: 70%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  border-bottom: 5px solid #00ADB5;
+  border-radius: 1rem;
+}
+
+#skils p:nth-child(even) {
+  background-color: #222831;
+  color: #EEEEEE;
+}
+
+#skils p:nth-child(odd) {
+  background-color: #393E46;
+  color: #EEEEEE;
+}
 
 /* Media Queries - Start */
 
 @media screen and (max-width: 200px) {
-  #welcome {
+  #welcome_section {
     width: 100%;
     margin: 0;
     border-radius: 0rem;
   }
 
-  #welcome img {
+  #welcome_section img {
     width: 5rem;
   }
 
-  #welcome header {
+  #welcome_section header {
     gap: 10px;
     flex-direction: column;
     align-items: center;
   }
 
-  #welcome header h2 {
+  #welcome_section header h2 {
     font-size: smaller;
     text-align: center;
   }
 }
 
 @media screen and (max-width: 520px) and (min-width: 201px) {
-  #welcome {
+  #welcome_section {
     width: 100%;
     margin: 0;
     padding: 1rem;
     border-radius: 0rem;
   }
 
-  #welcome header h2 {
+  #welcome_section header h2 {
     text-align: center;
   }
 
-  #welcome header {
+  #welcome_section header {
     width: 100%;
     display: flex;
     gap: 2rem;
